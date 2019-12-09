@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //Boring Variables
     private float moveInput;
     public float Speed;
     public float JumpForce;
@@ -25,18 +26,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-
+        //tar objectets rigidbody
         rb = GetComponent<Rigidbody>();
     }
-
+    //en fixed update för vanliga update uppdaterat för oregelbundet.
     void FixedUpdate()
     {
+        //har inte fixat raycast än så den är true alltid nu för att du ska kunna använda hoppa
         isGrounded = true;
-
+        //Variabler som tar din input på skrivbordet och gör om det så spelaren rör på sig.
         moveInput = Input.GetAxis("Horizontal") * Speed;
         moveInput *= Time.fixedDeltaTime;
         transform.Translate(moveInput, 0, 0);
-
+        //om spelar inte kollar höger när du rör dig höger kalla på flip functionen. och tvärtom
         if (facingRight == false && moveInput > 0)
         {
             Flip();
@@ -46,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
     }
-
+    // en vanlig update som kollar om s knappen är nere
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.S))
@@ -57,16 +59,16 @@ public class PlayerMovement : MonoBehaviour
         {
             sDown = false;
         }
-
+        // om s inte är nere...
         if (!sDown)
-        {
+        {// om is grounded är true så hoppar den lite o sånt
             if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
             {
                 isJumping = true;
                 jumpTimeCounter = JumpTime;
                 rb.velocity = Vector2.up * JumpForce;
             }
-
+            // mer gräjer om att den hoppar
             if (Input.GetKey(KeyCode.Space) && isJumping == true)
             {
                 if (jumpTimeCounter > 0)
@@ -80,14 +82,14 @@ public class PlayerMovement : MonoBehaviour
                 }
 
             }
-
+            // när du hoppat så blir det false så du inte kan hoppa igen
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 isJumping = false;
             }
         }
     }
-
+    // en funktion som vänder din spelare.
     void Flip()
     {
         facingRight = !facingRight;

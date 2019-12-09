@@ -432,5 +432,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9040211799417984766, guid: 3bd090ef67ed63a47a8758e7a3289d2e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040211799417984765, guid: 3bd090ef67ed63a47a8758e7a3289d2e,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040211799417984765, guid: 3bd090ef67ed63a47a8758e7a3289d2e,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040211799417984765, guid: 3bd090ef67ed63a47a8758e7a3289d2e,
+        type: 3}
+      propertyPath: autoRandomSeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040211799417984765, guid: 3bd090ef67ed63a47a8758e7a3289d2e,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bd090ef67ed63a47a8758e7a3289d2e, type: 3}
