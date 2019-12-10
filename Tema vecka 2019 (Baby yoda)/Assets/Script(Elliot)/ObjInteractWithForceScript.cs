@@ -10,6 +10,7 @@ public class ObjInteractWithForceScript : MonoBehaviour
     public bool Pull;
     public GameObject PointToMoveObjTo;
     public float HightOfFlot;
+    public float FlotingHight;
 
     public float TimeStartedLerping;
     public float LerpTime;
@@ -30,6 +31,7 @@ public class ObjInteractWithForceScript : MonoBehaviour
     {
         if(Floating)
         {
+            startLerping();
             objFloating();
         }
         else
@@ -95,34 +97,38 @@ public class ObjInteractWithForceScript : MonoBehaviour
 
 
     Vector3 lerp(Vector3 start, Vector3 end, float TimeStartedLerping, float LerpTime = 1)
-   {
+    {
         float timeSinceStarted = Time.time - TimeStartedLerping;
 
         float procentageComplete = timeSinceStarted / LerpTime;
 
         return Vector3.Lerp(start, end, procentageComplete);
-   }
+    }
+
 
     #endregion
     #region floating obj
 
     void objFloating()
     {
-        x += (speed/2) * Time.deltaTime;
-
+       
         if (!startSin)
 
-          y =  Vector3.Lerp(transform.position, new Vector3(transform.position.x , startPos.y + speed, 0), x).y;
-
-        if (x > startPos.y + 3)
+            transform.position = lerp(startPos, new Vector3(startPos.x,startPos.y + FlotingHight, 0), TimeStartedLerping, LerpTime);
+        else
         {
-            startSin = true;
-            y = HightOfFlot * Mathf.Cos(x);
+            x += speed * Time.deltaTime;
+            transform.position = new Vector3(transform.position.x, HightOfFlot * Mathf.Sin(x) + (startPos.y + FlotingHight));
         }
 
-            transform.position = new Vector3(transform.position.x, y);
-        
+
+        if (Vector3.Distance(transform.position, new Vector3( startPos.x, startPos.y + FlotingHight,0)) < .2f)
+        {
+            startSin = true;
+        }
+
     }
-     
+
     #endregion
+
 }
