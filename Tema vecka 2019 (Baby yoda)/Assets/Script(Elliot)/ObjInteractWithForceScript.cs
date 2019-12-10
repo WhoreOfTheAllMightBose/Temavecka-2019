@@ -6,12 +6,16 @@ public class ObjInteractWithForceScript : MonoBehaviour
 {
 
     public bool floating;
+    bool startSin;
     float x;
+    float y;
     public float speed;
+    Vector3 startPos;
 
     private void Start()
     {
         floating = false;
+        startPos = transform.position;
     }
 
     private void Update()
@@ -20,6 +24,12 @@ public class ObjInteractWithForceScript : MonoBehaviour
         {
             ObjFloating();
         }
+        else
+        {
+            startSin = false;
+            x = 0;
+            y = 0;
+        }
 
     }
 
@@ -27,15 +37,18 @@ public class ObjInteractWithForceScript : MonoBehaviour
     {
         x += speed * Time.deltaTime;
 
-        if (x != 0)
-            transform.position = new Vector3(transform.position.x, Mathf.Sqrt(Mathf.Sqrt(x)));
-        else
-            x += 1;
+        if (!startSin)
 
-        if (transform.position.y >= 1.7f)
-            speed *= -1;
-        if (transform.position.y <= 1)
-            speed *= -1;
+          y =  Vector3.Lerp(transform.position, new Vector3(transform.position.x , startPos.y + speed, 0), x).y;
+
+        if (x > startPos.y + 3)
+        {
+            startSin = true;
+            y = Mathf.Cos(x);
+        }
+
+            transform.position = new Vector3(transform.position.x, y);
+        
     }
      
     public void CanFloat()
