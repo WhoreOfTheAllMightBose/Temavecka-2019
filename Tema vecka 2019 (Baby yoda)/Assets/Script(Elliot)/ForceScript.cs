@@ -4,15 +4,44 @@ using UnityEngine;
 
 public class ForceScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool force;
+    GameObject objtriggerd;
+
+    private void Start()
     {
-        
+        force = false;
+    }
+    // Start is called before the first frame update
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.name == "Obj")
+        {
+            objtriggerd = other.gameObject;
+            force = true;
+
+            objtriggerd.gameObject.GetComponentInChildren<ParticleSystem>().Play();
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        if (other.name == "Obj")
+        {
+            objtriggerd.gameObject.GetComponentInChildren<ParticleSystem>().Stop();
+            objtriggerd = null;
+            force = false;
+
+
+        }
+    }
+
+    private void Update()
+    {
+        if (force && objtriggerd != null && Input.GetMouseButton(0))
+        {
+            objtriggerd.GetComponent<ObjInteractWithForceScript>().TriggerObj();
+        }
     }
 }

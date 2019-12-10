@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Lyfta
-  - Dra
-  - knockback
+  - Floating
+  - Pull
   layers:
   - Default
   - TransparentFX
