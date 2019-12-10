@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody rb;
 
-    private bool facingRight = true;
+    private bool facingRight = false;
     private bool sDown = false;
 
     private bool isGrounded;
