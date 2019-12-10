@@ -43,17 +43,22 @@ public class ObjInteractWithForceScript : MonoBehaviour
         {
             
             startLerping();
+            Pulling();
+          
+        }
+    }
 
-            transform.position = lerp(startPos, PointToMoveObjTo.transform.position, TimeStartedLerping, LerpTime);
+    void Pulling()
+    {
+        transform.position = lerp(startPos, PointToMoveObjTo.transform.position, TimeStartedLerping, LerpTime);
 
-            if (Vector3.Distance(transform.position, PointToMoveObjTo.transform.position) < 1f)
-            {
-               
-                transform.position = PointToMoveObjTo.transform.position;
+        if (Vector3.Distance(transform.position, PointToMoveObjTo.transform.position) < 1f)
+        {
 
-                Pull = false;
-                startedLerp = false;
-            }
+            transform.position = PointToMoveObjTo.transform.position;
+
+            Pull = false;
+            startedLerp = false;
         }
     }
 
@@ -78,10 +83,12 @@ public class ObjInteractWithForceScript : MonoBehaviour
     {
         if (!startedLerp)
         {
-            GetComponent<Rigidbody>().useGravity = false;
+            startPos = transform.position;
+            GetComponent<Rigidbody>().drag = 1000;
             TimeStartedLerping = Time.time;
         }
        
+      
 
         startedLerp = true;
     }
