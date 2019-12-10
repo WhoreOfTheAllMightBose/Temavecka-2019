@@ -32,8 +32,18 @@ public class PlayerMovement : MonoBehaviour
     //en fixed update för vanliga update uppdaterat för oregelbundet.
     void FixedUpdate()
     {
-        //har inte fixat raycast än så den är true alltid nu för att du ska kunna använda hoppa
-        isGrounded = true;
+
+        if (Physics.CheckSphere(groundCheck.position, checkRadius, whatIsGround))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+            
+
+
         //Variabler som tar din input på skrivbordet och gör om det så spelaren rör på sig.
         moveInput = Input.GetAxis("Horizontal") * Speed;
         moveInput *= Time.fixedDeltaTime;
