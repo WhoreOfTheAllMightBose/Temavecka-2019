@@ -20,7 +20,7 @@ public class PlayerSwitching : MonoBehaviour
     void Start()
     {
         YodaBaby.GetComponentInChildren<PlayerMovement>().enabled = false;
-        YodaBaby.GetComponentInChildren<CustomGravity>().enabled = false;
+        
 
         MandoMan.GetComponentInChildren<PlayerMovement>().enabled = true;
     }
@@ -36,7 +36,7 @@ public class PlayerSwitching : MonoBehaviour
             MandoMan.GetComponentInChildren<PlayerMovement>().enabled = false;
             MandoMan.GetComponentInChildren<CustomGravity>().enabled = false;
 
-
+            yodaInCrib = false;
 
         }
         else if (Input.GetKeyDown(KeyCode.T) && YodaBaby.GetComponentInChildren<PlayerMovement>().enabled)
@@ -45,7 +45,7 @@ public class PlayerSwitching : MonoBehaviour
             MandoMan.GetComponentInChildren<CustomGravity>().enabled = true;
 
             YodaBaby.GetComponentInChildren<PlayerMovement>().enabled = false;
-            YodaBaby.GetComponentInChildren<CustomGravity>().enabled = false;
+            
 
             yodaInCrib = true;
             
@@ -58,6 +58,8 @@ public class PlayerSwitching : MonoBehaviour
     {
         if (yodaInCrib)
         {
+            YodaBaby.GetComponentInChildren<Animator>().SetBool("Crib",true);
+            YodaBaby.GetComponentInChildren<CustomGravity>().enabled = false;
             float posX = Mathf.SmoothDamp(YodaBaby.transform.position.x, YodaCribPoint.transform.position.x, ref velocity.x, SmoothTimeX);
             float posY = Mathf.SmoothDamp(YodaBaby.transform.position.y, YodaCribPoint.transform.position.y, ref velocity.y, SmoothTimeY);
 
