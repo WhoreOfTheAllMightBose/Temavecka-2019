@@ -8,7 +8,7 @@ public class LevelDoneScript : MonoBehaviour
 {
     public Button Level02Button, Level03Button;
     int levelPassed;
-
+        
     private void Start()
     {
         levelPassed = PlayerPrefs.GetInt("LevelPassed");
@@ -36,4 +36,11 @@ public class LevelDoneScript : MonoBehaviour
         SceneManager.LoadScene(level);
     }
 
+    public void Relode()
+    {
+
+        Level02Button.interactable = false;
+        Level03Button.interactable = false;
+        PlayerPrefs.DeleteAll();
+    }
 }
