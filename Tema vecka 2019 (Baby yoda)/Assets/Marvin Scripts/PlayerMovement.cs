@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     public float Speed;
     public float JumpForce;
+    private int doubleJump = 2;
 
     private Rigidbody rb;
 
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         if (Physics.CheckSphere(groundCheck.position, checkRadius, whatIsGround))
         {
             isGrounded = true;
+            doubleJump = 2;
         }
         else
         {
@@ -61,6 +63,9 @@ public class PlayerMovement : MonoBehaviour
     // en vanlig update som kollar om s knappen är nere
     private void Update()
     {
+        GetComponentInChildren<Animator>().SetFloat("movement", Speed);
+        
+        
         if (Input.GetKeyDown(KeyCode.S))
         {
             sDown = true;
@@ -72,11 +77,12 @@ public class PlayerMovement : MonoBehaviour
         // om s inte är nere...
         if (!sDown)
         {// om is grounded är true så hoppar den lite o sånt
-            if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+            if (doubleJump > 0 && Input.GetKeyDown(KeyCode.Space))
             {
                 isJumping = true;
                 jumpTimeCounter = JumpTime;
                 rb.velocity = Vector2.up * JumpForce;
+                doubleJump =- 1;
             }
             // mer gräjer om att den hoppar
             if (Input.GetKey(KeyCode.Space) && isJumping == true)

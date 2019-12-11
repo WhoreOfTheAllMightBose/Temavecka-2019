@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Floating
   - Pull
+  - Lyfta
+  - Goal
   layers:
   - Default
   - TransparentFX
