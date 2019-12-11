@@ -63,7 +63,8 @@ public class PlayerMovement : MonoBehaviour
     // en vanlig update som kollar om s knappen är nere
     private void Update()
     {
-        GetComponent<Animator>().SetFloat("movement", Speed);
+        GetComponentInChildren<Animator>().SetFloat("movement", Speed);
+        
         
         if (Input.GetKeyDown(KeyCode.S))
         {

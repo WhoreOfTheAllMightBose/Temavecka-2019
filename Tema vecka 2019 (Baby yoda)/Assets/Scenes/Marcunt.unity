@@ -492,7 +492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016490926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -0.24, z: 0}
+  m_LocalPosition: {x: -0.31, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1100392083}
@@ -622,7 +622,7 @@ Transform:
   - {fileID: 1882330254}
   - {fileID: 1016490927}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1100392084
 BoxCollider:
@@ -678,10 +678,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97debda9b3b77a4f9b502b81d2ce3a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  DashSpeed: 0
-  startDashTime: 0
-  StartDashTimer: 0
+  rb: {fileID: 1100392085}
+  DashSpeed: 20
+  startDashTime: 0.1
+  StartDashTimer: 0.4
 --- !u!114 &1100392088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,14 +694,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c5f6e480b5d004a89e8bb8742cb330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
-  JumpForce: 0
+  Speed: 8
+  JumpForce: 7
   groundCheck: {fileID: 1016490927}
-  checkRadius: 0
+  checkRadius: 0.3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  JumpTime: 0
+  JumpTime: 0.2
   isJumping: 0
 --- !u!1 &1302219271
 GameObject:
@@ -1214,121 +1214,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &6576454262950891208 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 509149460341418293, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-    type: 3}
-  m_PrefabInstance: {fileID: 6653117318495856637}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6576454262950891209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6576454262950891208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 541c668a08b1dde4cafbdad577e7bb8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 5
---- !u!1001 &6653117318495856637
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 509149460341418293, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_Name
-      value: Mandalorian Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305228432815957231, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6653117320110784767, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6653117320110784767, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6653117320110784767, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 6653117320110784765, guid: a3fa49e055bcc5e4cb3299e79c110fda,
-        type: 3}
-      propertyPath: JumpForce
-      value: 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a3fa49e055bcc5e4cb3299e79c110fda, type: 3}
