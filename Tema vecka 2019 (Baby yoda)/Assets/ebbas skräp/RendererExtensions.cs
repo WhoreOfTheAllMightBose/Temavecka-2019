@@ -8,5 +8,7 @@ public static class RendererExtensions
     {
         Plane[] planes = GeometryUtility.CalculateFrustumPlanes(camera);
         return GeometryUtility.TestPlanesAABB(planes, renderer.bounds);
+
+        
     }
 }
