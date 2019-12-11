@@ -82,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
                 isJumping = true;
                 jumpTimeCounter = JumpTime;
                 rb.velocity = Vector2.up * JumpForce;
+                doubleJump =- 1;
             }
             // mer gräjer om att den hoppar
             if (Input.GetKey(KeyCode.Space) && isJumping == true)
