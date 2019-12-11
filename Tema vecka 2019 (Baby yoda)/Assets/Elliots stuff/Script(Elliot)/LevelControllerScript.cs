@@ -12,18 +12,20 @@ public class LevelControllerScript : MonoBehaviour
 
     int sceneIndex, levelPassed;
 
+
     // Start is called before the first frame update
     void Start()
     {
 
         if (instance == null)
             instance = this;
-        else if (instance != null)
-            Destroy(gameObject);
+     //   else if (instance != null)
+       //     Destroy(gameObject);
 
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         levelPassed = PlayerPrefs.GetInt("LevelPassed");
     }
+
 
     public void YouWin()
     {
@@ -53,4 +55,9 @@ public class LevelControllerScript : MonoBehaviour
         SceneManager.LoadScene("LevelMenu");
     }
 
+    void YouLose()
+    {
+
+        Invoke("LoadNextLevel", 1f);
+    }
 }
