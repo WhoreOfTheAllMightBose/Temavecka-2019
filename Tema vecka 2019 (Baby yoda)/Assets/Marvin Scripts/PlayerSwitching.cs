@@ -72,6 +72,7 @@ public class PlayerSwitching : MonoBehaviour
             float posX = Mathf.SmoothDamp(YodaBaby.transform.position.x, YodaCribPoint.transform.position.x, ref velocity.x, SmoothTimeX);
             float posY = Mathf.SmoothDamp(YodaBaby.transform.position.y, YodaCribPoint.transform.position.y, ref velocity.y, SmoothTimeY);
             MandoMan.GetComponentInChildren<Animator>().SetBool("Crib", false);
+            MandoMan.GetComponentInChildren<Shooting>().enabled = true;
             YodaBaby.transform.position = new Vector3(posX, posY, YodaBaby.transform.position.z);
         }
         else if (!yodaInCrib)
@@ -80,6 +81,7 @@ public class PlayerSwitching : MonoBehaviour
             MandoMan.GetComponentInChildren<CustomGravity>().enabled = false;
             float posX = Mathf.SmoothDamp(MandoMan.transform.position.x, MandoCribPoint.transform.position.x, ref velocity.x, SmoothTimeX);
             float posY = Mathf.SmoothDamp(MandoMan.transform.position.y, MandoCribPoint.transform.position.y, ref velocity.y, SmoothTimeY);
+            MandoMan.GetComponentInChildren<Shooting>().enabled = false;
             YodaBaby.GetComponentInChildren<Animator>().SetBool("Crib", false);
 
             MandoMan.transform.position = new Vector3(posX, posY, MandoMan.transform.position.z);

@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool facingRight = false;
     private bool sDown = false;
 
-    private bool isGrounded;
+    //private bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
@@ -38,12 +38,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Physics.CheckSphere(groundCheck.position, checkRadius, whatIsGround))
         {
-            isGrounded = true;
+            //isGrounded = true;
             doubleJump = 2;
         }
         else
         {
-            isGrounded = false;
+            //isGrounded = false;
         }
             
 
@@ -115,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
 
+        if (GunPoint != null)
         GunPoint.transform.Rotate(0f, 180f, 0f);
     }
 }
