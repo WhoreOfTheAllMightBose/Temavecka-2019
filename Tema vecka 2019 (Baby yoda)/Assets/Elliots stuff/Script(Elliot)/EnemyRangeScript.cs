@@ -32,9 +32,8 @@ public class EnemyRangeScript : EnemyBaseScript
 
     void attack()
     {
+
         Vector3 hitPoint = Player.transform.position;
-
-
 
     }
 
