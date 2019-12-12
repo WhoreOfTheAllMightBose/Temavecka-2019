@@ -8,6 +8,7 @@ public class EnemyBaseScript : MonoBehaviour
     public GameObject[] PrefabDrops; // så man kan öka antalet olika drops
 
     public GameObject Exclamation; // prefab för utroppstäcken
+    public float thrust;
     protected GameObject Player; // komma åt spelarens objekt
     GameObject g = null; // ett gameobjekt som kommer raderas rättså snabbt
 
@@ -33,16 +34,37 @@ public class EnemyBaseScript : MonoBehaviour
     }
 
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(float damage)
     {
-        health -= amount;
+        health -= damage;
+
         if (health <= 0f)
         {
-            WhatDrop(); // så att fienden droppar något vid sin död
+          //  WhatDrop(); // så att fienden droppar något vid sin död
 
             Die();
         }
     }
+
+    public void TakeDamage(int damage, Vector3 Playerpos)
+    {
+            health -= damage;
+
+            Vector3 difference = transform.position - Playerpos;
+        if(thrust != null)
+            difference = difference.normalized * thrust;
+
+            rb.AddForce(difference + new Vector3(0, 8, 0), ForceMode.Impulse);
+
+        if (health <= 0f)
+        {
+          //  WhatDrop(); // så att fienden droppar något vid sin död
+
+            Die();
+        }
+
+    }
+
     void Die()
     {
         Destroy(gameObject);
@@ -50,7 +72,6 @@ public class EnemyBaseScript : MonoBehaviour
 
     public virtual void Update()
     {
-       
 
         hunt(); // all bas funktion för en finde
     }

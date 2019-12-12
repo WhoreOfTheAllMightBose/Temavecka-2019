@@ -15,10 +15,9 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider hitInfo)
     {
-        TempEnemy enemy = hitInfo.GetComponent<TempEnemy>();
-        if (enemy != null)
+        if (hitInfo != null && hitInfo.tag == "Enemy")
         {
-            enemy.TakeDamage(Damage, transform.position);
+            hitInfo.GetComponent<EnemyBaseScript>().TakeDamage(100,transform.position);
         }
         Destroy(gameObject);
     }
