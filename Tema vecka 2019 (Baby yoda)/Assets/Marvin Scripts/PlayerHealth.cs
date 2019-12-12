@@ -18,11 +18,7 @@ public class PlayerHealth : MonoBehaviour
     public float RespawnTime;
     private Vector3 spawnPos;
 
-    public Rigidbody2D rb;
-
-    public Image[] hearts;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
+    public Rigidbody rb;
 
     bool Dead = false;
 
@@ -30,13 +26,6 @@ public class PlayerHealth : MonoBehaviour
     {
         Health = MaxHealth;
         slider.value = CalculateHealth();
-    }
-
-    public void TakeDamage(float amount)
-    {
-        Health -= amount;
-
-
     }
 
     void Update()
@@ -74,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
 
             Vector3 difference = transform.position - EnemyPos;
             difference = difference.normalized * thrust;
-            rb.AddForce(difference + new Vector3(0, 8, 0), ForceMode2D.Impulse);
+            rb.AddForce(difference + new Vector3(0, 8, 0), ForceMode.Impulse);
 
             imuneTime = startImuneTime;
             imune = true;

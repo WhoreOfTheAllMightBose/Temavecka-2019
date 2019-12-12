@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public float JumpForce;
     private int doubleJump = 2;
 
+    public GameObject GunPoint;
+
     private Rigidbody rb;
 
     private bool facingRight = false;
@@ -112,5 +114,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+
+        GunPoint.transform.Rotate(0f, 180f, 0f);
     }
 }
