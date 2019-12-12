@@ -8,7 +8,7 @@ public class EnemyBaseScript : MonoBehaviour
     public GameObject[] PrefabDrops; // så man kan öka antalet olika drops
 
     public GameObject Exclamation; // prefab för utroppstäcken
-    GameObject Player; // komma åt spelarens objekt
+    protected GameObject Player; // komma åt spelarens objekt
     GameObject g = null; // ett gameobjekt som kommer raderas rättså snabbt
 
     bool facingRight;
