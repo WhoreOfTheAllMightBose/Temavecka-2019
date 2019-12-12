@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class SnöBollScript : MonoBehaviour
 {
-    /*
-    int x, y;
-    public float speed;
 
-    // Start is called before the first frame update
-  //  void Start(float playerposX)
+    float x, y;
+    public float speed;
+    float playerposx;
+
+    private void Start()
     {
-        
+        x = 0;
+        y = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-      //  transform.position = new Vector3(x,)
+        transform.position = new Vector3(x, y, 0);
     }
 
     void funktion()
     {
-       // x += speed * Time.deltaTime;
+        x += speed * Time.deltaTime;
+
+        y = (x * x) + (x * playerposx);
     }
-    */
+
+    public void PlayerPos(float posOfPlayerX)
+    {
+        playerposx = posOfPlayerX;
+    }
 }

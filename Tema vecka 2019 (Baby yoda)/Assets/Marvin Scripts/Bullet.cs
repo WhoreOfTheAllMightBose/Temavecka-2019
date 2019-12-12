@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
     {
         if (hitInfo != null && hitInfo.tag == "Enemy")
         {
-            hitInfo.GetComponent<EnemyBaseScript>().TakeDamage(100,transform.position);
+            hitInfo.GetComponent<EnemyBaseScript>().TakeDamage(Damage,transform.position);
         }
         Destroy(gameObject);
     }

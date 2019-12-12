@@ -49,7 +49,6 @@ public class EnemyBaseScript : MonoBehaviour
     public void TakeDamage(int damage, Vector3 Playerpos)
     {
             health -= damage;
-
             Vector3 difference = transform.position - Playerpos;
         if(thrust != null)
             difference = difference.normalized * thrust;
@@ -64,6 +63,8 @@ public class EnemyBaseScript : MonoBehaviour
         }
 
     }
+
+
 
     void Die()
     {
@@ -85,8 +86,7 @@ public class EnemyBaseScript : MonoBehaviour
     {
         if (GetLeanght() < DistanceToFollow)
         {
-             // Notise();
-            Flip();
+            Notise();
 
             return true;
         }
@@ -105,10 +105,9 @@ public class EnemyBaseScript : MonoBehaviour
 
         else
         {
-            g = Instantiate(Exclamation, new Vector3(transform.position.x,
-                transform.position.y + GetComponent<BoxCollider>().size.y,
-                transform.position.z), Quaternion.identity);
-            Destroy(g, 0.25f); // så att utroppstäcknet försvinner efter 0.25 sec
+            Vector3 temp = GetComponentInParent<Transform>().position;
+            g = Instantiate(Exclamation, new Vector3(temp.x - .5f ,temp.y , 0) ,Quaternion.identity);
+            Destroy(g, .8f); // så att utroppstäcknet försvinner efter 0.25 sec
         }
     }
 
@@ -122,11 +121,17 @@ public class EnemyBaseScript : MonoBehaviour
         if (onTheHunt || ToClose()) // sålänge finden är "on the hunt" så kommer fienden forsätta jaga dig
         {
             if (onTheHunt != true) // så att den inte sätter "onthehunt" till true varje gång den går igenom scriptet
+            {
                 onTheHunt = true;
+                Flip();
+                GetComponentInChildren<Animator>().SetFloat("walk", Speed);
+            }
+               
 
             direction = GetDir(); // uppdaterar fiendens direktion
 
             lookat(); // så att fienden kollar på dig
+
         }
 
         direction.Normalize();
