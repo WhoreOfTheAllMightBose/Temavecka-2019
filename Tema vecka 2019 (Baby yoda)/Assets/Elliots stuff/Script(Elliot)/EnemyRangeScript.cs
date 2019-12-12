@@ -35,6 +35,7 @@ public class EnemyRangeScript : EnemyBaseScript
         Vector3 hitPoint = Player.transform.position;
 
 
+
     }
 
     void reversflip()
