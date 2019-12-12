@@ -39,7 +39,7 @@ public class ForceScript : MonoBehaviour
 
     private void Update()
     {
-        if (force && objtriggerd != null && Input.GetMouseButton(0))
+        if (force && objtriggerd != null && Input.GetKeyDown(KeyCode.E))
         {
             objtriggerd.GetComponent<ObjInteractWithForceScript>().TriggerObj();
         }
