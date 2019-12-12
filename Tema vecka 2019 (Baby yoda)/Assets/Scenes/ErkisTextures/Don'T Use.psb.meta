@@ -103,7 +103,7 @@ ScriptedImporter:
     - name: bone_3
       position: {x: 24.6363, y: 152.92352, z: 0}
       rotation: {x: 0, y: 0, z: -0.24938689, w: 0.968404}
-      length: 259.6864
+      length: 259.68637
       parentId: -1
     spriteOutline: []
     vertices: []
@@ -157,7 +157,7 @@ ScriptedImporter:
     - name: bone_4
       position: {x: 16.392155, y: 39.239563, z: 0}
       rotation: {x: 0, y: 0, z: 0.0024413983, w: 0.9999971}
-      length: 378.7733
+      length: 378.77325
       parentId: -1
     spriteOutline: []
     vertices: []
@@ -244,15 +244,15 @@ ScriptedImporter:
       length: 46.960175
       parentId: -1
     - name: bone_3
-      position: {x: -6.1779213, y: 84.65142, z: 0}
-      rotation: {x: 0, y: 0, z: -0.8611112, w: 0.50841665}
+      position: {x: 85.6363, y: 291.92352, z: 0}
+      rotation: {x: 0, y: 0, z: -0.24938689, w: 0.968404}
       length: 259.68637
-      parentId: 0
+      parentId: -1
     - name: bone_4
-      position: {x: -98.861595, y: 106.89669, z: 0}
-      rotation: {x: 0, y: 0, z: -0.70538265, w: 0.7088268}
+      position: {x: 63.392155, y: 199.23958, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0024413983, w: 0.9999971}
       length: 378.77325
-      parentId: 0
+      parentId: -1
     parts:
     - spritePosition:
         x: 61
@@ -295,9 +295,9 @@ ScriptedImporter:
   boneGOs:
   - go: {fileID: -1299283142243026913, guid: 7f23ff735bd9162438098f979d18d78c, type: 3}
     index: 0
-  - go: {fileID: 1281336000316677295, guid: 7f23ff735bd9162438098f979d18d78c, type: 3}
+  - go: {fileID: 6373893005597839880, guid: 7f23ff735bd9162438098f979d18d78c, type: 3}
     index: 1
-  - go: {fileID: -7032557076830957219, guid: 7f23ff735bd9162438098f979d18d78c, type: 3}
+  - go: {fileID: -3902330226025117619, guid: 7f23ff735bd9162438098f979d18d78c, type: 3}
     index: 2
   generateGOHierarchy: 0
   textureAssetName: BB8_NEW Texture
