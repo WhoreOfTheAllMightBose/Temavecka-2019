@@ -11,6 +11,8 @@ public class EnemyBaseScript : MonoBehaviour
     GameObject Player; // komma åt spelarens objekt
     GameObject g = null; // ett gameobjekt som kommer raderas rättså snabbt
 
+    bool facingRight;
+
     protected bool onTheHunt = false; // ifall finden börjat jaga dig
 
     protected float dropChance = 0; // chansen att något droppas
@@ -48,13 +50,7 @@ public class EnemyBaseScript : MonoBehaviour
 
     public virtual void Update()
     {
-
-        //if(health <= 0)
-        //{
-        //    WhatDrop(); // så att fienden droppar något vid sin död
-
-        //    Destroy(this.gameObject); // dödar detta objekt(fienden)
-        //}
+       
 
         hunt(); // all bas funktion för en finde
     }
@@ -68,8 +64,8 @@ public class EnemyBaseScript : MonoBehaviour
     {
         if (GetLeanght() < DistanceToFollow)
         {
-            //  Notise();
-            print("ser dig");
+             // Notise();
+            Flip();
 
             return true;
         }
@@ -122,19 +118,27 @@ public class EnemyBaseScript : MonoBehaviour
     /// <summary>
     /// Så att fienden kollar på dig
     /// </summary>
-    void lookat()
+    protected void lookat()
     {
-        Vector3 d = new Vector3(GetDir().x, 0, GetDir().z);// för att finden ska kolla på dig behöver den en direction dock så vill vi inte att den ska kolla på spelaren i Y led
-                                                           // för det skulle bli för mycket för grafikerna att göra
-        Vector3 newdir = Vector3.RotateTowards(transform.forward, d, 5 * Time.deltaTime, 0.0f);
 
-        transform.rotation = Quaternion.LookRotation(newdir);
+        if (GetDir().x <= -1)
+        {
+            Flip();
+        }
+    }
+
+    protected void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 scaler = transform.localScale;
+        scaler.x *= -1;
+        transform.localScale = scaler;
     }
     /// <summary>
     /// får fram en direktion för finden om den ska gå till spelaren
     /// </summary>
     /// <returns>en vector3 (directionen)</returns>
-    Vector3 GetDir()
+    protected Vector3 GetDir()
     {
         Vector3 dir = Player.transform.position - transform.position;
         dir.Normalize();
