@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Elliots stuff/Scene(Elliot)/Level1.unity
     guid: 7b3d36b08bc30ff41b3cd68d89e5217b
   - enabled: 1
-    path: Assets/Elliots stuff/Scene(Elliot)/Level2.unity
-    guid: a41fe618202c1a94f816741dd692e7ca
+    path: Assets/level2 backup.unity
+    guid: 8091fcd3279be6141a474d28512830e6
   - enabled: 1
     path: Assets/Elliots stuff/Scene(Elliot)/Level3.unity
     guid: a9b0c3042dde3fb468892e488ce662e3
+  - enabled: 1
+    path: Assets/Elliots stuff/Scene(Elliot)/MainScene.unity
+    guid: f6979a8ec7d807347ab5abe458ad63ca
   m_configObjects: {}

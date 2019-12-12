@@ -50,9 +50,9 @@ public class LevelControllerScript : MonoBehaviour
 
     }
 
-    void loadLevelMenue()
+    public void loadLevelMenue()
     {
-        SceneManager.LoadScene("LevelMenu");
+        SceneManager.LoadScene("LevelScene");
     }
 
     void YouLose()
