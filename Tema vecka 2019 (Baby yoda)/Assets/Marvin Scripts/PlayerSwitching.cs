@@ -17,6 +17,7 @@ public class PlayerSwitching : MonoBehaviour
     public float SmoothTimeX;
 
     bool yodaInCrib = true;
+    bool Switchable = true;
 
 
     void Start()
@@ -30,8 +31,9 @@ public class PlayerSwitching : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T) && MandoMan.GetComponentInChildren<PlayerMovement>().enabled)
+        if (Input.GetKeyDown(KeyCode.T) && MandoMan.GetComponentInChildren<PlayerMovement>().enabled && Switchable)
         {
+            Switchable = false;
             YodaBaby.GetComponentInChildren<PlayerMovement>().enabled = true;
             YodaBaby.GetComponentInChildren<CustomGravity>().enabled = true;
 
@@ -41,19 +43,21 @@ public class PlayerSwitching : MonoBehaviour
             ForceSkit.SetActive(true);
 
             yodaInCrib = false;
+            StartCoroutine(Timer());
 
         }
-        else if (Input.GetKeyDown(KeyCode.T) && YodaBaby.GetComponentInChildren<PlayerMovement>().enabled)
+        else if (Input.GetKeyDown(KeyCode.T) && YodaBaby.GetComponentInChildren<PlayerMovement>().enabled && Switchable)
         {
+            Switchable = false;
             MandoMan.GetComponentInChildren<PlayerMovement>().enabled = true;
             MandoMan.GetComponentInChildren<CustomGravity>().enabled = true;
 
             YodaBaby.GetComponentInChildren<PlayerMovement>().enabled = false;
             ForceSkit.SetActive(false);
             
-
             yodaInCrib = true;
-            
+            StartCoroutine(Timer());
+
         }
         
     }
@@ -80,5 +84,14 @@ public class PlayerSwitching : MonoBehaviour
 
             MandoMan.transform.position = new Vector3(posX, posY, MandoMan.transform.position.z);
         }
+    }
+
+
+    private IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(1);
+
+        Switchable = true;
+        
     }
 }
