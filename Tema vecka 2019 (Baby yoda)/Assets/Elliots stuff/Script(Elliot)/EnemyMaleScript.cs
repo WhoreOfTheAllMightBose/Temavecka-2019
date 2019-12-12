@@ -24,13 +24,17 @@ public class EnemyMaleScript : EnemyBaseScript
         base.Update();
     }
 
+    public void attackClosePlayer()
+    {
+
+        float dis = Vector3.Distance(transform.position, Player.transform.position);
+
+    }
+
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Player")
         {
-            // insert that player take dmg
-            //   other.gameObject.GetComponent<PlayerHealth>().TakeDamage(3,transform.position);
-          
             Speed = StartSpeed;
             a = true;
         }

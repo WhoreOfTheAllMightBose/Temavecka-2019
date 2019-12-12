@@ -17,6 +17,7 @@ public class EnemyRangeScript : EnemyBaseScript
 
     public override void Update()
     {
+        /*
         if(ToClose())
         {
             reversflip();
@@ -26,6 +27,14 @@ public class EnemyRangeScript : EnemyBaseScript
         {
             reversflip();
         }
+        */
+    }
+
+    void attack()
+    {
+        Vector3 hitPoint = Player.transform.position;
+
+
     }
 
     void reversflip()
