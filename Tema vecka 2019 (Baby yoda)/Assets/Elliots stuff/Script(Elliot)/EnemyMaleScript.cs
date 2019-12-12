@@ -9,7 +9,6 @@ public class EnemyMaleScript : EnemyBaseScript
     public EnemyMaleScript()
     {
         a = false;
-        DistanceToFollow = 5;
     }
 
     public override void Update()
@@ -19,6 +18,7 @@ public class EnemyMaleScript : EnemyBaseScript
             Speed += 1 * Time.deltaTime;
             if (Speed >= maxSpeed)
                 a = false;
+          //s  GetComponentInChildren<Animator>().SetBool("attack", false);
         }
 
         base.Update();
@@ -29,10 +29,26 @@ public class EnemyMaleScript : EnemyBaseScript
         if (other.gameObject.tag == "Player")
         {
             // insert that player take dmg
-            print("moist");
-         //   other.gameObject.GetComponent<PlayerHealth>().TakeDamage(3,transform.position);
+            //   other.gameObject.GetComponent<PlayerHealth>().TakeDamage(3,transform.position);
+          
             Speed = StartSpeed;
             a = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            GetComponentInChildren<Animator>().SetBool("attack", true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            GetComponentInChildren<Animator>().SetBool("attack", false);
         }
     }
 }
