@@ -18,7 +18,6 @@ public class Bullet : MonoBehaviour
         TempEnemy enemy = hitInfo.GetComponent<TempEnemy>();
         if (enemy != null)
         {
-
             enemy.TakeDamage(Damage, transform.position);
         }
         Destroy(gameObject);

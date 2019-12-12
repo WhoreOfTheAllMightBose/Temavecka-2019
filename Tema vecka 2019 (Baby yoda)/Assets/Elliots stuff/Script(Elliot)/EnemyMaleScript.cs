@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMaleScript : EnemyBaseScript
 {
     public float maxSpeed;
+    public int damage;
     bool a;
     public EnemyMaleScript()
     {
@@ -28,6 +29,11 @@ public class EnemyMaleScript : EnemyBaseScript
     {
 
         float dis = Vector3.Distance(transform.position, Player.transform.position);
+
+        if(dis < 5f)
+        {
+            Player.GetComponent<PlayerHealth>().TakeDamage(damage, transform.position);
+        }
 
     }
 
