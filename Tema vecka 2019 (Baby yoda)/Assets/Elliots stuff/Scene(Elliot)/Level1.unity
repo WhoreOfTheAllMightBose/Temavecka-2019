@@ -5527,7 +5527,7 @@ GameObject:
   - component: {fileID: 947836132}
   - component: {fileID: 947836136}
   - component: {fileID: 947836137}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Fiender
   m_TagString: Untagged
   m_Icon: {fileID: 0}

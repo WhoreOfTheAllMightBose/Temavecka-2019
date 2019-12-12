@@ -15,7 +15,6 @@ public class PlayerSwitching : MonoBehaviour
 
     public float SmoothTimeY;
     public float SmoothTimeX;
-
     bool yodaInCrib = true;
     bool Switchable = true;
 
@@ -23,7 +22,8 @@ public class PlayerSwitching : MonoBehaviour
     void Start()
     {
         YodaBaby.GetComponentInChildren<PlayerMovement>().enabled = false;
-        
+        ForceSkit.SetActive(false);
+
 
         MandoMan.GetComponentInChildren<PlayerMovement>().enabled = true;
     }
