@@ -19,7 +19,7 @@ public class EnemyMaleScript : EnemyBaseScript
             Speed += 1 * Time.deltaTime;
             if (Speed >= maxSpeed)
                 a = false;
-          //s  GetComponentInChildren<Animator>().SetBool("attack", false);
+          //  GetComponentInChildren<Animator>().SetBool("attack", false);
         }
 
         base.Update();
