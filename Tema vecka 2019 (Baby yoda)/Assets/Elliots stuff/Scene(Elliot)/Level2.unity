@@ -5184,6 +5184,110 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023345501}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1052851862
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5169852686488765556, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_Name
+      value: valross med fart (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.991
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.44317257
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.44317257
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.44317257
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: HightOfFlot
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: FlotingHight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: fart
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: timer
+      value: 380
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
 --- !u!1001 &1086672364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5719,6 +5823,210 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268234138}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1305193301
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5169852686488765556, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_Name
+      value: valross med fart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2878
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.1496
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.822
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.18502137
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.18502137
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.18502137
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: HightOfFlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: FlotingHight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: timer
+      value: 380
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+--- !u!1001 &1305367064
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5169852686488765556, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_Name
+      value: valross med fart (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.0663
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.2693
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2924939
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2924939
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169852686488765557, guid: 14f1f9de4358a5a40b79180531cc5baa,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2924939
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: HightOfFlot
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: FlotingHight
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: fart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438915705, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
+      propertyPath: timer
+      value: 380
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14f1f9de4358a5a40b79180531cc5baa, type: 3}
 --- !u!1001 &1609062277
 PrefabInstance:
   m_ObjectHideFlags: 0
