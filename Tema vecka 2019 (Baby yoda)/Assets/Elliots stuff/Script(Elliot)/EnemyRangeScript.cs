@@ -55,7 +55,7 @@ public class EnemyRangeScript : EnemyBaseScript
         Vector3 hitPoint = Player.transform.position;
 
         GameObject g = Instantiate(SnöBoll, transform.position, Quaternion.identity);
-        g.GetComponent<SnöBollScript>().PlayerPos(Player.transform.position.x);
+        g.GetComponent<SnöBollScript>().PlayerPos(Player.transform.position,GetComponentInParent<Transform>().position);
 
     }
 

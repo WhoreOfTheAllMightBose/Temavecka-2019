@@ -759,7 +759,7 @@ PrefabInstance:
     - target: {fileID: 5415769708824379286, guid: 657a887c9cb10834580ef4c80abc61b5,
         type: 3}
       propertyPath: timer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3205357424275258534, guid: 657a887c9cb10834580ef4c80abc61b5,
         type: 3}
@@ -13642,6 +13642,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1112280729}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: PointsToMoveObjTo
+      value: 
+      objectReference: {fileID: 401612591}
+    - target: {fileID: 0}
+      propertyPath: PointToMoveObjTo
+      value: 
+      objectReference: {fileID: 401612591}
+    - target: {fileID: 0}
+      propertyPath: LerpTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Floating
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HightOfFlot
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: FlotingHight
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9079997377019408941, guid: a7b31ffaa8a3ec544be482c2fc587420,
         type: 3}
       propertyPath: m_Name
@@ -13727,52 +13763,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9079997377019408937, guid: a7b31ffaa8a3ec544be482c2fc587420,
+    - target: {fileID: 9079997377019408938, guid: a7b31ffaa8a3ec544be482c2fc587420,
         type: 3}
-      propertyPath: PointsToMoveObjTo
-      value: 
-      objectReference: {fileID: 401612591}
-    - target: {fileID: 9079997377019408937, guid: a7b31ffaa8a3ec544be482c2fc587420,
-        type: 3}
-      propertyPath: PointToMoveObjTo
-      value: 
-      objectReference: {fileID: 401612591}
-    - target: {fileID: 9079997377019408937, guid: a7b31ffaa8a3ec544be482c2fc587420,
-        type: 3}
-      propertyPath: LerpTime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9079997377019408937, guid: a7b31ffaa8a3ec544be482c2fc587420,
-        type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9079997377019408937, guid: a7b31ffaa8a3ec544be482c2fc587420,
-        type: 3}
-      propertyPath: Floating
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9079997377019408937, guid: a7b31ffaa8a3ec544be482c2fc587420,
-        type: 3}
-      propertyPath: HightOfFlot
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9079997377019408937, guid: a7b31ffaa8a3ec544be482c2fc587420,
-        type: 3}
-      propertyPath: FlotingHight
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9079997377019408936, guid: a7b31ffaa8a3ec544be482c2fc587420,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
-    - target: {fileID: 9079997377019408936, guid: a7b31ffaa8a3ec544be482c2fc587420,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -231985125126394491, guid: a7b31ffaa8a3ec544be482c2fc587420, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7b31ffaa8a3ec544be482c2fc587420, type: 3}
 --- !u!1 &2137996406 stripped
 GameObject:
@@ -13802,6 +13799,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 1
+--- !u!114 &2137996409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137996406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecddc91336fe6c0488bd7e204620eb4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Floating: 0
+  speed: 3
+  Pull: 0
+  PointToMoveObjTo: {fileID: 401612591}
+  HightOfFlot: 0
+  FlotingHight: 0
+  TimeStartedLerping: 0
+  LerpTime: 0
 --- !u!1001 &3118785763854743700
 PrefabInstance:
   m_ObjectHideFlags: 0
