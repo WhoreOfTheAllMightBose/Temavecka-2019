@@ -9,6 +9,7 @@ TagManager:
   - Lyfta
   - Goal
   - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
