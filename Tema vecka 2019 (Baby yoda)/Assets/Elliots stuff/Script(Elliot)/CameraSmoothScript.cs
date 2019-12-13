@@ -33,6 +33,7 @@ public class CameraSmoothScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T) && swichstuff)
         {
             isYoda = !isYoda;
+            swichstuff = !swichstuff;
         }
 
         transform.position = Vector3.Lerp(transform.position, swappos(isYoda), SmoothSpeed);

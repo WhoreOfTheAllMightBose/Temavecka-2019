@@ -5,29 +5,48 @@ using UnityEngine;
 public class EnemyRangeScript : EnemyBaseScript
 {
     public float maxSpeed;
-    bool a;
+    public GameObject SnöBoll;
     bool playerclose;
+    public float timer;
+    float timeLeft;
+
+    private void Start()
+    {
+        base.Start();
+        if (timer == null)
+            timer = 2;
+
+       
+        timeLeft = timer;
+    }
 
     public EnemyRangeScript()
     {
-        a = false;
         playerclose = false;
         DistanceToFollow = 5;
     }
 
     public override void Update()
     {
-        /*
-        if(ToClose())
+
+
+        if(ToClose()&& Timer())
         {
-            reversflip();
-            transform.position += GetDir() * -Speed * Time.deltaTime;
+            attack();
         }
-        else
+
+        base.Update();
+    }
+
+    bool Timer()
+    {
+        if((timeLeft -= Time.deltaTime )<= 0)
         {
-            reversflip();
+            timeLeft = timer;
+            return true;
         }
-        */
+
+        return false;
     }
 
     void attack()
@@ -35,8 +54,12 @@ public class EnemyRangeScript : EnemyBaseScript
 
         Vector3 hitPoint = Player.transform.position;
 
+        GameObject g = Instantiate(SnöBoll, transform.position, Quaternion.identity);
+        g.GetComponent<SnöBollScript>().PlayerPos(Player.transform.position,GetComponentInParent<Transform>().position);
+
     }
 
+    /*
     void reversflip()
     {   
         if(!ToClose() && !playerclose)
@@ -51,6 +74,6 @@ public class EnemyRangeScript : EnemyBaseScript
             transform.position += new Vector3(-1.4f, 0, 0);
         }
     }
-
+    */
 
 }
