@@ -68,13 +68,14 @@ public class EnemyBaseScript : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        GetComponentInChildren<Animator>().SetBool("death", true);
+
+        Destroy(gameObject,3);
     }
 
     public virtual void Update()
     {
-
-        hunt(); // all bas funktion för en finde
+           hunt(); // all bas funktion för en finde
     }
 
     #region enemy behov
@@ -124,7 +125,7 @@ public class EnemyBaseScript : MonoBehaviour
             {
                 onTheHunt = true;
                 Flip();
-                GetComponentInChildren<Animator>().SetFloat("walk", Speed);
+                GetComponentInChildren<Animator>().SetFloat("movment", Speed);
             }
                
 

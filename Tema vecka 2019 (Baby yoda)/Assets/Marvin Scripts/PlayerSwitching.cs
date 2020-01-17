@@ -41,7 +41,7 @@ public class PlayerSwitching : MonoBehaviour
             MandoMan.GetComponentInChildren<CustomGravity>().enabled = false;
             MandoMan.GetComponentInChildren<DashMove>().enabled = false;
             ForceSkit.SetActive(true);
-
+            CameraSmoothScript.isYoda = true;
             yodaInCrib = false;
             StartCoroutine(Timer());
 
@@ -54,7 +54,7 @@ public class PlayerSwitching : MonoBehaviour
 
             YodaBaby.GetComponentInChildren<PlayerMovement>().enabled = false;
             ForceSkit.SetActive(false);
-            
+            CameraSmoothScript.isYoda = false;
             yodaInCrib = true;
             StartCoroutine(Timer());
 
